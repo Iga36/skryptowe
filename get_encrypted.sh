@@ -1,5 +1,12 @@
 #!/bin/bash
 
+#sprawdzenie czy podano plik do zaszyfrowania
+if [ "$#" -ne 1 ]; then
+    echo "Użycie: $0 <plik_tekstowy>"
+    exit 1
+fi
+
+
 #nazwa pliku koncowego (.enc oznacza encrypted)
 output="$1.enc"
 
